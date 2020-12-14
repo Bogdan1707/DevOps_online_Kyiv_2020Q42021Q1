@@ -23,7 +23,7 @@ empty file and committed it. <br>
     ![GIT](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/master/imagesf/5.png)
     * Added "imagesf" folder with some images inside it (there are all images for readme.md file) and committed with "git add" --> "git commit" commands <br>
     ![GIT](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/master/imagesf/6.png) <br>
-    ![GIT](7)
+    ![GIT](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/master/imagesf/7.png)
     * Added some images1 and images2 sources inside it and committed in the same way. <br>
     ![GIT](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/master/imagesf/8.png)
 6. Then I checkouted on "styles" branch and made following steps:
@@ -53,3 +53,5 @@ empty file and committed it. <br>
 #### All my work you could see, joining me with invite link (except AndriiKostromytskyi, I've sent You invitation): https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/invitations <br> <br>
 
 ## What is DevOps? <br>
+DevOps is work methodology, that combines Software development (DEV), Operation (Ops) and sometimes SW Testing. That methodology is intended for effective create and upgrade software. <br> Generally, DEvOps is created for better Development and Operation teams collaboration, for optimizing release time and upgrade process.<br>
+The main goal of DevOps engineer is to achieve coherence in development and release processes with different tools, that help to organize that processes in general team.  
