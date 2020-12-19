@@ -19,7 +19,7 @@ The first type of hypervisors includes solutions Hyper-V, KVM, ESXi.<br> Example
 #### PART 2. WORK WITH VIRTUALBOX
 
 1. Firstly, I downloaded and installed the newest version of VirtualBox ( 6.1.16), then downloaded and installed Ubuntu desktop (version 20.10). Following photos shows some stages of Ubuntu installation. <br>
-![](https://raw.githubusercontent.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/main/m2/task2.1/images/1.png) <br>
+![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m2/task2.1/images/1.png?raw=true) <br>
 ![](2) <br>
 ![](3) <br>
 ![](4) <br>
