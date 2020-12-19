@@ -115,7 +115,7 @@ Table of executed connections (possibilities to ping each other machines): <br>
 ![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m2/task2.1/images/40.png?raw=true) <br>
 ![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m2/task2.1/images/41.png?raw=true) <br>
 ![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m2/task2.1/images/42.png?raw=true) <br>
-12. Then I downloaded, installed and initialized default Vgrant Box.
+12. Then I downloaded, installed and initialized default Vagrant Box. <br>
 ![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m2/task2.1/images/43.png?raw=true) <br>
 ![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m2/task2.1/images/44.png?raw=true) <br>
 13. Than I tried to install my own Vagrant box
