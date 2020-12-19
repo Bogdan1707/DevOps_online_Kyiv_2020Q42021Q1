@@ -20,41 +20,41 @@ The first type of hypervisors includes solutions Hyper-V, KVM, ESXi.<br> Example
 
 1. Firstly, I downloaded and installed the newest version of VirtualBox ( 6.1.16), then downloaded and installed Ubuntu desktop (version 20.10). Following photos shows some stages of Ubuntu installation. <br>
 ![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m2/task2.1/images/1.png?raw=true) <br>
-![](2) <br>
-![](3) <br>
-![](4) <br>
+![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m2/task2.1/images/2.png?raw=true) <br>
+![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m2/task2.1/images/3.png?raw=true) <br>
+![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m2/task2.1/images/4.png?raw=true) <br>
 2. Then I just observed the main possibilities of VM managing, like: start, stop, reboot, save state, use Host key and keyboard shortcuts, mouse capture. For instance, Save state of machine. <br>
-![](5) <br>
-![](6) <br>
+![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m2/task2.1/images/5.png?raw=true) <br>
+![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m2/task2.1/images/6.png?raw=true) <br>
 3. Then I cloned VM1 by creating a VM2 <br>
-![](7) <br>
-![](8) <br>
+![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m2/task2.1/images/7.png?raw=true) <br>
+![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m2/task2.1/images/8.png?raw=true) <br>
 4. Then I created group of two VMs <br>
-![](9) <br>
-![](10) <br>
+![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m2/task2.1/images/9.png?raw=true) <br>
+![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m2/task2.1/images/10.png?raw=true) <br>
 5. Next I took 4 snapshots in VM1 <br>
-![](11) <br>
-![](12) <br>
+![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m2/task2.1/images/11.png?raw=true) <br>
+![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m2/task2.1/images/12.png?raw=true) <br>
 6. Then I exported and imported back .ova file of VM1. <br>
-![](13) <br>
-![](14) <br>
-![](15) <br>
-![](16) <br>
-![](17) <br>
+![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m2/task2.1/images/13.png?raw=true) <br>
+![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m2/task2.1/images/14.png?raw=true) <br>
+![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m2/task2.1/images/15.png?raw=true) <br>
+![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m2/task2.1/images/16.png?raw=true) <br>
+![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m2/task2.1/images/17.png?raw=true) <br>
 7. Then I explored VM configuration options (general settings, system settings, display, storage, audio, network, etc.) <br>
 
 8. Next I had to configured the USB Connection. Firstly, I downloaded and installed plugin "Oracle VMware Extension Pack" <br>
-![](18) <br>
-![](19) <br>
-![](20) <br>
-![](21) <br>
+![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m2/task2.1/images/18.png?raw=true) <br>
+![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m2/task2.1/images/19.png?raw=true) <br>
+![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m2/task2.1/images/20.png?raw=true) <br>
+![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m2/task2.1/images/21.png?raw=true) <br>
 9. Then I created and configured shared folder "VirtualBoxFiles" <br>
-![](22) <br>
-![](23) <br>
-![](24) <br>
+![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m2/task2.1/images/22.png?raw=true) <br>
+![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m2/task2.1/images/23.png?raw=true) <br>
+![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m2/task2.1/images/24.png?raw=true) <br>
 10. Next part of my work was with different network modes, that can be configured in VM-->Settings-->Network. And also should be configured Host-Only Adapter for external work.<br>
-![](25) <br>
-![](26) <br>
+![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m2/task2.1/images/25.png?raw=true) <br>
+![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m2/task2.1/images/26.png?raw=true) <br>
 Table of executed connections (possibilities to ping each other machines): <br>
 <table>
     <tr>
@@ -95,27 +95,27 @@ Table of executed connections (possibilities to ping each other machines): <br>
 </table> <br>
 
 ##### Host-only
-![](27) <br>
-![](28) <br>
-![](29) <br>
+![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m2/task2.1/images/27.png?raw=true) <br>
+![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m2/task2.1/images/28.png?raw=true) <br>
+![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m2/task2.1/images/29.png?raw=true) <br>
 ##### NAT
-![](30) <br>
-![](31) <br>
+![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m2/task2.1/images/30.png?raw=true) <br>
+![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m2/task2.1/images/31.png?raw=true) <br>
 ##### Bridged
-![](32) <br>
-![](33) <br>
-![](34) <br>
+![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m2/task2.1/images/32.png?raw=true) <br>
+![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m2/task2.1/images/33.png?raw=true) <br>
+![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m2/task2.1/images/34.png?raw=true) <br>
 ##### Internal
-![](35) <br>
-![](36) <br>
+![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m2/task2.1/images/35.png?raw=true) <br>
+![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m2/task2.1/images/36.png?raw=true) <br>
 11. Then I worked with command line <br>
-![](37) <br>
-![](38) <br>
-![](39) <br>
-![](40) <br>
-![](41) <br>
-![](42) <br>
+![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m2/task2.1/images/37.png?raw=true) <br>
+![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m2/task2.1/images/38.png?raw=true) <br>
+![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m2/task2.1/images/39.png?raw=true) <br>
+![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m2/task2.1/images/40.png?raw=true) <br>
+![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m2/task2.1/images/41.png?raw=true) <br>
+![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m2/task2.1/images/42.png?raw=true) <br>
 12. Then I downloaded, installed and initialized default Vgrant Box.
-![](43) <br>
-![](44) <br>
+![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m2/task2.1/images/43.png?raw=true) <br>
+![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m2/task2.1/images/44.png?raw=true) <br>
 13. Than I tried to install my own Vagrant box
