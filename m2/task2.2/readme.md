@@ -68,7 +68,7 @@
     ![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m2/task2.2/images/42.png?raw=true)<br>
     * In bucket I created service <br>
     ![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m2/task2.2/images/43.png?raw=true)<br>
-    * then using public IP we can connect to our WEB App
+    * then using public IP we can connect to our WEB App <br>
     ![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m2/task2.2/images/44.png?raw=true)<br>
     ![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m2/task2.2/images/45.png?raw=true)<br>
 12. Then I created my personal WEB Site. You can open it with following link <br>
