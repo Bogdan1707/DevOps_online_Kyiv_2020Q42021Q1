@@ -3,6 +3,8 @@
 ## Module 2 Virtualization and Cloud Basic
 
 ### TASK 2.2
+
+My WEB site link: http://bohdanbucket1.s3-website.us-east-2.amazonaws.com/
 1. First of all, for processing all tasks I had to get root(admin) rights and rights for using Lightsail. For that I had to register in IAM user and there add roles for users.
 2. Then I could already create Linux Virtual Machine with Amazon Lightsail and connect to it. <br>
 ![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m2/task2.2/images/1.png?raw=true)<br>
@@ -71,4 +73,4 @@
     * then using public IP we can connect to our WEB App <br>
     ![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m2/task2.2/images/44.png?raw=true)<br>
     ![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m2/task2.2/images/45.png?raw=true)<br>
-12. Then I created my personal WEB Site. You can open it with following link <br>
+12. Then I created my personal WEB Site. You can open it with following link: http://bohdanbucket1.s3-website.us-east-2.amazonaws.com/<br>
