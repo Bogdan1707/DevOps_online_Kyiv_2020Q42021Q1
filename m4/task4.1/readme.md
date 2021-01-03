@@ -28,6 +28,7 @@ Each computer received IP-address. Subnet mask was 255.255.255.0. <br>
 2. Then I checked the connection inside that local network by making ICMP requests. <br> And checked information about requested packets and their OSI model conformity. <br>
 Some of the the packets have been collided during checking, but that is common problem of hub usage. <br> Because of that it isn't useful in present network topologies. <br>
 ![](https://raw.githubusercontent.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/main/m4/task4.1/images/2.png?token=AICG7UADPUW6XHGGGPBGF6K76IH3M) <br>
+![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m4/task4.1/images/3.png)
 ![](https://raw.githubusercontent.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/main/m4/task4.1/images/3.png?token=AICG7UEURMBIYHNWBI7JNEK76IIEI) <br>
 ![](https://raw.githubusercontent.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/main/m4/task4.1/images/4.png?token=AICG7UBRFST3LF6HLEZFMFK76IIIS)
 3. Then I deleted IP addresses on PCs and tried to ping they ones again but that action was unsuccessful, because PC without own unique IP address isn't part of local network. <br>
