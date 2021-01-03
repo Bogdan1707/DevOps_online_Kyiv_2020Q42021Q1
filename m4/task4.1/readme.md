@@ -5,7 +5,7 @@
 
 In this task I have analyzed the simplest topologies of local network.
 1. First topology was following one. Four computers have been connected to one hub.<br>
-![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m4/task4.1/images/1.png?raw=true)<br>
+![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m4/task4.1/image/1.png?raw=true)<br>
 Each computer received IP-address. Subnet mask was 255.255.255.0. <br>
 <table>
     <tr>
@@ -28,7 +28,7 @@ Each computer received IP-address. Subnet mask was 255.255.255.0. <br>
 2. Then I checked the connection inside that local network by making ICMP requests. <br> And checked information about requested packets and their OSI model conformity. <br>
 Some of the the packets have been collided during checking, but that is common problem of hub usage. <br>
 Because of that it isn't useful in present network topologies.<br>
-![image](./image/2.png)<br>
+![image](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m4/task4.1/image/2.png)<br>
 ![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m4/task4.1/images/3.png?raw=true)<br>
 ![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m4/task4.1/images/4.png?raw=true)<br>
 3. Then I deleted IP addresses on PCs and tried to ping they ones again but that action was unsuccessful, because PC without own unique IP address isn't part of local network. <br>
