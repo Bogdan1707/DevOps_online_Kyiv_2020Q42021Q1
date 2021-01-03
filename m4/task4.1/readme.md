@@ -70,7 +70,9 @@ Because of that it isn't useful in present network topologies.<br>
     </tr>
 </table>
 6. And tried to create some ICMP requests. Requests have been proceeded successfully. <br> And I saw information about packets, their usage and what protocols from what OSI level were used. <br>
+
 ![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m4/task4.1/images/8.png?raw=true)<br>
+
 ![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m4/task4.1/images/9.png?raw=true)<br>
 7. Next topology was following one. 4 PCs and Switch-PT<br>
 ![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m4/task4.1/images/10.png?raw=true)<br>
