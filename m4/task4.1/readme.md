@@ -96,7 +96,9 @@ Because of that it isn't useful in present network topologies.<br>
 </tr>
 </table> <br>
 9. And the results of ICMP request. <br>
+
 ![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m4/task4.1/images/11.png?raw=true)<br>
+
 ![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m4/task4.1/images/12.png?raw=true)<br>
 Topology with hub and topology with switch are differentiating by packet routing. <br> Hub is network device of first OSI level, and his function is retransmitting signal from input port to others. <br> So, ICMP request are transmitting not to certain port, but to all other ports of device. In this way packets could be collided or losen. <br>
 Switch is network device of second OSI level, so before data transmission it forms Commutation table of MAC addresses of connected devices and then transmit packets to certain port and device.
@@ -138,7 +140,9 @@ IP address table. Subnet mask 255.255.255.0 <br>
     </tr>
 </table>
 11. Results of requesting <br>
+
 ![m](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m4/task4.1/images/14.png?raw=true)<br>
+
 11. Then I extended the previous project by adding a router. The router divided this LAN into two subnets.<br>
 ![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m4/task4.1/images/15.png?raw=true)<br>
 12. IP address tables for two networks. <br>
@@ -179,7 +183,9 @@ IP address table. Subnet mask 255.255.255.0 <br>
 </tr>
 </table>
 13. Next I turned on ports on router, and added for ports certain IP addresses from Subnets. Then I added gateway for each PC, using IP address of certain router port. <br>
+
 ![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m4/task4.1/images/16.png?raw=true)<br>
+
 ![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m4/task4.1/images/17.png?raw=true)<br>
 14. Results of requesting <br>
 ![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m4/task4.1/images/18.png?raw=true)<br>
