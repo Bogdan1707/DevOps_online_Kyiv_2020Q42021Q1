@@ -6,7 +6,6 @@
 In this task I have analyzed the simplest topologies of local network.
 1. First topology was following one. Four computers have been connected to one hub. <br>
 ![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m4/task4.1/images/1.png?raw=true) <br>
-![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m4/task4.1/images/1.png?raw=true) <br>
 Each computer received IP-address. Subnet mask was 255.255.255.0. <br>
 <table>
     <tr>
