@@ -9,7 +9,7 @@ I have chosen it's E-Shop.
 2. There is my database schema: <br>
 ![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m3/task3.1/images/1.png?raw=true)<br>
 3. Then I created database "eshop" with four tables: "sales", "clients", "goods" and "offers". <br>
-![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m3/task3.1/images/2.png?raw=true)<br>
+![image2](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m3/task3.1/images/2.png?raw=true)<br>
 ![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m3/task3.1/images/3.png?raw=true)<br>
 ![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m3/task3.1/images/4.png?raw=true)<br>
 ![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m3/task3.1/images/5.png?raw=true)<br>
