@@ -4,6 +4,7 @@
 #### Task 5.1
 ##### Part 1
 
+My Ubuntu system was installed in VirtualBox. <br>
 1. Firstly I logged in to the system as a root via Putty and changed password for that user. <br>
 ![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m5/task5.1/images/1.png?raw=true) <br>
 There I showed content of passwd file, which is located in /etc directory. <br> That file contains info about users, which can deal with different directories (following dirs) and files.<br>
