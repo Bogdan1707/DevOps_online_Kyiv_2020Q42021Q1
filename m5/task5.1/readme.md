@@ -30,18 +30,18 @@ less .bash_history <br>
 ![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m5/task5.1/images/11.png?raw=true) <br>
 
 ##### Part 2
-1. In this part firstly I executed tree command to show different situation, in which it can be used <br>
-it shows all files that starts with "k" <br>
+1. In this part firstly I executed tree command to show different situation, in which it can be used. <br>
+It shows all files that starts with "k" <br>
 ![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m5/task5.1/images/12.png?raw=true) <br>
-it shows all dirs tree with depth 2 <br>
+That shows all dirs tree with depth 2 <br>
 ![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m5/task5.1/images/13.png?raw=true) <br>
-2. Next command show file data, for instance type of file <br>
+2. Next command shows file data, for instance type of file <br>
 ![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m5/task5.1/images/14.png?raw=true) <br>
 3. Then were some practice with absolute and relative paths <br> By the way, command "cd ~" or "cd" can return user to home dir from anywhere <br>
 ![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m5/task5.1/images/15.png?raw=true) <br>
 ![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m5/task5.1/images/16.png?raw=true) <br>
 4. Then I executed some ls commands, using -a and -l keys. <br>
-ls -a commands shows all files located in that dir/subdir, hiden as well <br>
+ls -a command shows all files located in that dir/subdir, hidden as well <br>
 ls -l shows a full list of files with info about owner, group, date of creation, size, access rights, etc. <br>
  --full-time key shows detailed info about files and detailed info about time <br>
 ![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m5/task5.1/images/17.png?raw=true) <br>
@@ -88,7 +88,7 @@ host character sequence <br>
   ![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m5/task5.1/images/34.png?raw=true) <br>
   * lsusb - shows USB devices in system. Lspci shows controller of USB. <br>
   ![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m5/task5.1/images/35.png?raw=true) <br>
-  * lssci - shows hard disc and optical disc drives <br>
+  * lsscsi - shows hard disc and optical disc drives <br>
   ![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m5/task5.1/images/36.png?raw=true) <br>
   * lscpu - shows CPU info <br>
   ![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m5/task5.1/images/37.png?raw=true) <br>
