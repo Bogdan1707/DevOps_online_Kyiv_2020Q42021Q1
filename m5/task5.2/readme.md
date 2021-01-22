@@ -117,6 +117,7 @@ That denotes those parameters: <br>
   If there is **-** instead of symbol, it means something is not permitted for someone. For example from previous screenshot: <br>
   **.profile -rw-r--r--** <br>
 It means user **bohdan** can read and change file **.profile**, bat can't execute it. <br> User group **bohdan** can only read this file, as same as other users<br>
+
 13. **What is the sequence of defining the relationship between the file and the user?** <br>
 I've already described the relation between users and file.
 Here is sequence of rights: <br>
