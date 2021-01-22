@@ -113,6 +113,7 @@ That denotes those parameters: <br>
     </tr>
 </table>
 <br>
+
   If there is **-** instead of symbol, it means something is not permitted for someone. For example from previous screenshot: <br>
   **.profile -rw-r--r--** <br>
 It means user **bohdan** can read and change file **.profile**, bat can't execute it. <br> User group **bohdan** can only read this file, as same as other users
