@@ -1,7 +1,7 @@
 # EPAM University Programs
 ## DevOps external course
 ### Module 5 - Linux Essentials
-#### Task 5.1
+#### Task 5.2
 ##### Part 1
 My Ubuntu system is installed in VirtualBox. <br>
 1. <b> Analyze the structure of the /etc/passwd and /etc/group file, what fields are present in it, what users exist on the system? Specify several pseudo-users, how to define them? <br> </b>
