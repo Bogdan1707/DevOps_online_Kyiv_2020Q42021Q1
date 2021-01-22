@@ -94,12 +94,25 @@ The third group of three characters denotes the file or directory permissions fo
 There is the same sequence of symbols: <br>
   **rwx** <br>
 That denotes those parameters: <br>
-| Parameters     | Meaning     |
-| :------------- | :------------- |
-| r      | **read**, that is read access to a file or directory       |
-|w | **write**, that is change or delete access to a a file or directory |
-|x| **eXecute**, that is execute access to file or enter to directory | <br>
-
+<table>
+    <tr>
+        <td>Parameters</td>
+        <td>Meaning</td>
+    </tr>
+    <tr>
+        <td>r</td>
+        <td> <b>read</b>, that is read access to a file or directory</td>
+    </tr>
+    <tr>
+        <td>w</td>
+        <td><b>write</b>, that is change or delete access to a a file or directory</td>
+    </tr>
+    <tr>
+        <td>x</td>
+        <td><b>eXecute</b>, that is execute access to file or enter to directory</td>
+    </tr>
+</table>
+<br>
   If there is **-** instead of symbol, it means something is not permitted for someone. For example from previous screenshot: <br>
   **.profile -rw-r--r--** <br>
 It means user **bohdan** can read and change file **.profile**, bat can't execute it. <br> User group **bohdan** can only read this file, as same as other users
