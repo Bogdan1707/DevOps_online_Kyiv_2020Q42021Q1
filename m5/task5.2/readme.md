@@ -24,7 +24,7 @@ Here are some my users:
   Services that need the ability to write files to disk are launched on behalf of this daemon user.
   * proxy: x:13:13:proxy:/bin:/usr/sbin/nologin <br>
   This user is being used by proxy servers.
-  * hplip: x:124:7:HPLIP system user,,,:/run/hplip:/bin/false
+  * hplip: x:124:7:HPLIP system user,,,:/run/hplip:/bin/false <br>
   This user aims to ease Linux systems' ability to interact with HP's inkjet and laser printers with full printing, scanning, and faxing support.<br>
 Here is my /etc/group file <br>
 ![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m5/task5.2/images/2.png?raw=true) <br>
@@ -55,7 +55,7 @@ Here is example of changing username in home catalog <br>
 ![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m5/task5.2/images/6.png?raw=true)<br>
 ![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m5/task5.2/images/7.png?raw=true)<br>
 7. **What is skell_dir? What is its structure?** <br>
-	The /etc/skel directory contains files and directories that are automatically copied over to a new user’s when it is created from **useradd** command.
+	The /etc/skel directory contains files and directories that are automatically copied over to a new user’s when it is created from **useradd** command. <br>
 ![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m5/task5.2/images/8.png?raw=true)
 8. **How to remove a user from the system (including his mailbox.)** <br>
 Use key -r(-remove) in order to delete user home catalog and mail folder <br>
@@ -93,12 +93,12 @@ The second group of three characters denotes the file or directory permissions f
 The third group of three characters denotes the file or directory permissions for everyone else **(o - other).** <br>
 There is the same sequence of symbols: <br>
   **rwx** <br>
-That denotes those parameters:
+That denotes those parameters: <br>
 | Parameters     | Meaning     |
 | :------------- | :------------- |
 | r      | **read**, that is read access to a file or directory       |
 |w | **write**, that is change or delete access to a a file or directory |
-|x| **eXecute**, that is execute access to file or enter to directory |
+|x| **eXecute**, that is execute access to file or enter to directory | <br>
 
   If there is **-** instead of symbol, it means something is not permitted for someone. For example from previous screenshot: <br>
   **.profile -rw-r--r--** <br>
