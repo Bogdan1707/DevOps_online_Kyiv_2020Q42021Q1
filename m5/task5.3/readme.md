@@ -5,13 +5,13 @@
 ##### Part 1
 1. **How many states could has a process in Linux?** <br>
 There are two models of process states:
-  * **3-states diagram:**
+  * **3-states diagram:** <br>
   ![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m5/task5.3/images/1.png?raw=true)<br>
     * **Ready** - In the ready state, the process is waiting to be assigned the processor by the short term scheduler, so it can run. <br >This state is immediately after the **Created** state for the process.
     * **Running** - The process is said to be in running state when the process instructions are being executed by the processor. <br> This is done once the process is assigned to the processor using the short-term scheduler.
     * **Waiting** or **Blocked** - The process is in blocked state if it is waiting for some event to occur. This event may be I/O as the I/O events are executed in the main memory and don't require the processor.<br> After the event is complete, the process again goes to ready state.
 
-  * **5-States diagram** consist of previous 3 states and additionally has 2 states:
+  * **5-States diagram** consist of previous 3 states and additionally has 2 states:<br>
   ![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m5/task5.3/images/2.png?raw=true)<br>
 
     * **Created** - This is the state when she process has just been created. It is the initial state in the process life cycle.
@@ -137,5 +137,5 @@ Firstly, I had to choose NAT connection in VBox for VM1 and add port forwarding 
 Then I connected to localhost(127.0.0.1) via Putty SSH client, using 2222 port. <br>
 ![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m5/task5.3/images/39.png?raw=true)<br>
 ![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m5/task5.3/images/40.png?raw=true)<br>
-In new connection window I specified guest name and password and it forwarded me to guest VM. Here is evidence. <br>
+In new connection window I specified guest name and password and it forwarded me to guest VM. Here is an evidence. <br>
 ![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m5/task5.3/images/41.png?raw=true)<br>
