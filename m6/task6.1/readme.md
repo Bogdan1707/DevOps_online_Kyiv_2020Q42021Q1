@@ -25,5 +25,5 @@ Using **dig** command **I determined IP addresses that belong to epam.com** <br>
 ![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m6/task6.1/images/10.png?raw=true)<br>
 **Using netstat I determined default gateway and displayed routing table** <br>
 ![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m6/task6.1/images/11.png?raw=true)<br>
-And the last one, **I traced the route to google.com bi ICMP request** <br>
+And the last one, **I traced the route to google.com by ICMP request** <br>
 ![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m6/task6.1/images/12.png?raw=true)<br>
