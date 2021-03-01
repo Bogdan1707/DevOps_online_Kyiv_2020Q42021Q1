@@ -12,6 +12,6 @@ Here is an example:
 ![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m8/images/1.png?raw=true) <br>
 * In 2 minutes Jenkins scanned GitHub for new pushes and crated new build <br>
 ![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m8/images/2.png?raw=true) <br>
-* Let's check the result
+* Let's check the result <br>
 ![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m8/images/3.png?raw=true) <br>
 Our job has correctly deployed new version of code
