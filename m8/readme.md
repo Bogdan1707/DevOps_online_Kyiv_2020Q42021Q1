@@ -9,9 +9,9 @@ Then I created job in Jenkins, configured setting in order to make it check ever
 I case of new push, Jenkins downloads index.html file from GitHub, builds and deploys on Apache server. <br>
 Here is an example:
 * I make new change in index.html file and pushed it to GitHub <br>
-![](1.png) <br>
+![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m8/images/1.png?raw=true) <br>
 * In 2 minutes Jenkins scanned GitHub for new pushes and crated new build <br>
-![](2.png) <br>
+![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m8/images/2.png?raw=true) <br>
 * Let's check the result
-![](3.png) <br>
+![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/m8/images/3.png?raw=true) <br>
 Our job has correctly deployed new version of code
