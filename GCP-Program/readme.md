@@ -79,7 +79,7 @@ sudo /usr/sbin/td-agent-gem install fluent-plugin-bigquery <br>
   pos_file /var/log/td-agent/httpd-access.log.pos <br>
   tag nginx.access <br>
 </source"> <br>
-<match nginx.access>
+<match nginx.access"> <br>
   @type bigquery_insert <br>#Authenticate with BigQuery using the VM's service account.<br>
   auth_method compute_engine <br>
   project composed-task-321415<br>
