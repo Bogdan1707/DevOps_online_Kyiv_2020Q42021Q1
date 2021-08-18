@@ -5,10 +5,9 @@
 Next picture shows schemes of my service <br>
 ![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/GCP-Program/images/1.png) <br>
 When users uses public IP of external LB on nginx he will reach "nginx welcome page". <br>
-Using /img-bucket path it will redirect users to bucket with pictures. That will be described later. <br>
-Tomcat will be not reachable from external sources by firewall rules <br>
+Using /img-bucket path it will redirect users to bucket with pictures.<br> Using /demo path it will redirect to tomcat app via configured DNS. That will be described later. <br>
 
-Firstly, created 2 buckets - public11 and private11. Uploaded tomcat sample app and nginx config file private11 and cats pictures on private11 <br>
+Firstly, created 2 buckets - public11 and private11. Uploaded tomcat sample app and nginx config file on private11 and cats pictures on public11 <br>
 > gsutil mb -c standard -l us-east1 gs://private11 <br>
 > gsutil mb -c standard -l us-east1 gs://public11 <br>
 > cp default gs://private11 <br>
@@ -44,3 +43,16 @@ Then set autoscaling
 
 And created health-check
 > gcloud compute health-checks create http hc-http-tomcat-8080 \ <br> --region=us-east1 \ <br> --port=8080
+
+Next created internal DNS (in US-East1) for following usage it in forwarding rules for tomcat. It will redirect from external IP to tomcat app <br>
+> gcloud dns managed-zones create backend-dns \ <br>--description="DNS for backends" \ <br> --dns-name="internal.host" \ <br> --visibility=private \ <br> --networks=default <br> <br>
+gcloud dns record-sets transaction start --zone=backend-dns <br><br>
+gcloud dns record-sets transaction add 10.180.0.1 \ <br> --name=backend-tomcat.internal.host \ <br> --ttl=300 \ <br> --type=A \ <br> --zone=backend-dns <br><br>
+gcloud dns record-sets transaction execute --zone=backend-dns
+
+Then created backend-service, health service, route to tomcat MIG. Also added frontend (forwarding rules). <br>
+> gcloud compute backend-services create tomcat-internal-ln \ <br>--load-balancing-scheme=INTERNAL \ <br> --protocol=tcp \ <br> --region=us-east1 \ <br>--health-checks=hc-http-tomcat-8080 <br><br>
+gcloud compute backend-services add-backend tomcat-internal-ln \ <br>--region=us-east1 \ <br> --instance-group=tomcat-instance-group \ <br> --instance-group-zone=us-east1-b <br><br>
+gcloud compute forwarding-rules create tomcat-internal-ln-fr \ <br>--region=us-east1 \ <br> --load-balancing-scheme=INTERNAL \ <br> --network=default \ <br>--subnet=default \ <br> --address=10.142.0.2 \ <br>--ip-protocol=TCP \ <br> --ports=8080,80,443,22 \ <br>--backend-service=tomcat-internal-ln \ <br> --backend-service-region=us-east1 
+
+Then created
