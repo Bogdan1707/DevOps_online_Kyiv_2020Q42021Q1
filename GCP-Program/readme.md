@@ -3,7 +3,7 @@
 
 #### 1. Creating nginx + tomcat service, using it as backends for external and internal LB
 Next picture shows schemes of my service <br>
-![](1.png) <br>
+![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/GCP-Program/images/1.png) <br>
 When users uses public IP of external LB on nginx he will reach "nginx welcome page". <br>
 Using /img-bucket path it will redirect users to bucket with pictures. That will be described later. <br>
 Tomcat will be not reachable from external sources by firewall rules <br>
