@@ -101,4 +101,23 @@ Created health-check <br>
 > gcloud compute health-checks create tcp nginx-frontend-healthcheck \ <br>--timeout=5 \ <br>--check-interval=10 \ <br> --unhealthy-threshold=2 \ <br>--healthy-threshold=2 \ <br>--port=80
 
 Created and set nginx instance group <br>
-> gcloud compute health-checks create tcp nginx-frontend-healthcheck \ <br>--timeout=5 \ <br>--check-interval=10 \ <br>--unhealthy-threshold=2 \ <br>--healthy-threshold=2 \ <br>--port=80
+
+> gcloud compute instance-groups managed create nginx-frontend-group \ <br>--template=nginx-frontend-template \ <br>--size=1 \ <br>--zone=us-east1-b \ <br>--health-check=nginx-frontend-healthcheck \ <br>--initial-delay=300 <br> <br>
+> gcloud compute instance-groups managed set-autoscaling nginx-frontend-group \ <br> --zone=us-east1-b \ <br>--cool-down-period=60 \ <br>--max-num-replicas=2 \ <br>--min-num-replicas=1 \ <br>--target-cpu-utilization=0.7 \ <br>--mode=on
+
+Created backend for nginx
+>  gcloud compute backend-services create nginx-backend \ <br> --protocol=http \ <br> --region=us-east1 \ <br>--health-checks=nginx-frontend-healthcheck <br><br>
+gcloud compute backend-services add-backend nginx-backend \ <br>--region=us-east1 \ <br> --instance-group=nginx-frontend-group \ <br> --instance-group-zone=us-east1-b <br><br>
+
+Created forwarding rules for nginx
+>gcloud compute forwarding-rules create ext-lb-forwarding-rule \ <br>--region=us-east1 \ <br> --network=default \ <br>--subnet=default \ <br>--ip-protocol=HTTP \ <br> --ports=80 \ <br>--backend-service=nginx-backend \ <br> --backend-service-region=us-east1
+
+Do not forget to add following code to default nginx config file in private bucket. That describes redirect pathes for nginx backend <br>
+![](2.png) <br>
+So, we created our service. Let's check it! <br>
+Copy ext LB IP as URL and see the result. It should be nginx welcome page <br>
+![](3.png) <br>
+Typing /demo/ path it will redirect us to tomcat app <br>
+![](4.png) <br>
+Typing /img-bucket/ path and name of picture it will redirect us to pictures stored in Cloud Storage <br>
+![](5.png) <br>
