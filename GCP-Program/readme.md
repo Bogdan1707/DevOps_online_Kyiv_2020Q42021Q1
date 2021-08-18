@@ -5,7 +5,7 @@
 Next picture shows schemes of my service <br>
 ![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/GCP-Program/images/1.png) <br>
 When users uses public IP of external LB on nginx he will reach "nginx welcome page". <br>
-Using /img-bucket path it will redirect users to bucket with pictures.<br> Using /demo path it will redirect to tomcat app via configured DNS. That will be described later. <br>
+Using /img-bucket path it will redirect users to bucket with pictures.<br> Using /demo path it will redirect to tomcat app via configured DNS. <br> Also nginx will send logt to That will be described later. <br>
 
 Firstly, created 2 buckets - public11 and private11. Uploaded tomcat sample app and nginx config file on private11 and cats pictures on public11 <br>
 > gsutil mb -c standard -l us-east1 gs://private11 <br>
@@ -50,9 +50,55 @@ gcloud dns record-sets transaction start --zone=backend-dns <br><br>
 gcloud dns record-sets transaction add 10.180.0.1 \ <br> --name=backend-tomcat.internal.host \ <br> --ttl=300 \ <br> --type=A \ <br> --zone=backend-dns <br><br>
 gcloud dns record-sets transaction execute --zone=backend-dns
 
-Then created backend-service, health service, route to tomcat MIG. Also added frontend (forwarding rules). <br>
+Then created backend-service, route to tomcat MIG. Also added frontend (forwarding rules). <br>
 > gcloud compute backend-services create tomcat-internal-ln \ <br>--load-balancing-scheme=INTERNAL \ <br> --protocol=tcp \ <br> --region=us-east1 \ <br>--health-checks=hc-http-tomcat-8080 <br><br>
 gcloud compute backend-services add-backend tomcat-internal-ln \ <br>--region=us-east1 \ <br> --instance-group=tomcat-instance-group \ <br> --instance-group-zone=us-east1-b <br><br>
-gcloud compute forwarding-rules create tomcat-internal-ln-fr \ <br>--region=us-east1 \ <br> --load-balancing-scheme=INTERNAL \ <br> --network=default \ <br>--subnet=default \ <br> --address=10.142.0.2 \ <br>--ip-protocol=TCP \ <br> --ports=8080,80,443,22 \ <br>--backend-service=tomcat-internal-ln \ <br> --backend-service-region=us-east1 
+gcloud compute forwarding-rules create tomcat-internal-ln-fr \ <br>--region=us-east1 \ <br> --load-balancing-scheme=INTERNAL \ <br> --network=default \ <br>--subnet=default \ <br> --address=10.142.0.2 \ <br>--ip-protocol=TCP \ <br> --ports=8080,80,443,22 \ <br>--backend-service=tomcat-internal-ln \ <br> --backend-service-region=us-east1
 
-Then created
+Then created nginx template with startup script, MIG, health check, autoscaling. <br>
+Startup script for nginx servers: <br>
+> #!/bin/bash <br>
+>#installing nginx <br>
+sudo apt update <br>
+sudo apt install nginx -y <br>
+sudo service  nginx enable <br>
+sudo gsutil cp gs://private11/default /etc/nginx/sites-enabled/ <br>
+sudo service nginx restart  <br>
+> #installing td-agent for logging <br>
+curl -L https://toolbelt.treasuredata.com/sh/install-ubuntu-xenial-td-agent4.sh | sh <br>
+sudo usermod -aG adm td-agent <br>
+sudo /usr/sbin/td-agent-gem install fluent-plugin-bigquery <br>
+>cat << EOF > /etc/td-agent/td-agent.conf <br>
+<"source> <br>
+  @type tail <br>
+  @id input_tail <br>
+  <parse"> <br>
+    @type nginx <br>
+  </parse"> <br>
+  path /var/log/nginx/access.log <br>
+  pos_file /var/log/td-agent/httpd-access.log.pos <br>
+  tag nginx.access <br>
+</source"> <br>
+<match nginx.access>
+  @type bigquery_insert <br>#Authenticate with BigQuery using the VM's service account.<br>
+  auth_method compute_engine <br>
+  project composed-task-321415<br>
+  dataset fluentd <br>
+  table nginx_access <br>
+  fetch_schema true <br>
+  <inject"> <br>#Convert fluentd timestamp into TIMESTAMP string <br>
+  time_key time <br>
+  time_type string <br>
+  time_format %Y-%m-%dT%H:%M:%S.%NZ <br>
+</inject"> <br>
+</match"> <br>
+EOF
+
+Created nginx templates <br>
+> gcloud compute instance-templates create nginx-frontend-template \ <br>--network=default \ <br>--metadata-from-file startup-script=startup2.sh \ <br>--service-account=tomcat-server@composed-task-321415.iam.gserviceaccount.com \ <br>--tags=http-server,https-server \ <br>--image=ubuntu-1604-xenial-v20210429 \ <br>--image-project=ubuntu-os-cloud
+
+Created health-check <br>
+> gcloud compute health-checks create tcp nginx-frontend-healthcheck \ <br>--timeout=5 \ <br>--check-interval=10 \ <br> --unhealthy-threshold=2 \ <br>--healthy-threshold=2 \ <br>--port=80
+
+Created and set nginx instance group <br>
+> gcloud compute health-checks create tcp nginx-frontend-healthcheck \ <br>--timeout=5 \ <br>--check-interval=10 \ <br>--unhealthy-threshold=2 \ <br>--healthy-threshold=2 \ <br>--port=80
