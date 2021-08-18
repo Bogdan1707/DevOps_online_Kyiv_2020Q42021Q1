@@ -113,11 +113,11 @@ Created forwarding rules for nginx
 >gcloud compute forwarding-rules create ext-lb-forwarding-rule \ <br>--region=us-east1 \ <br> --network=default \ <br>--subnet=default \ <br>--ip-protocol=HTTP \ <br> --ports=80 \ <br>--backend-service=nginx-backend \ <br> --backend-service-region=us-east1
 
 Do not forget to add following code to default nginx config file in private bucket. That describes redirect pathes for nginx backend <br>
-![](2.png) <br>
+![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/GCP-Program/images/2.png) <br>
 So, we created our service. Let's check it! <br>
 Copy ext LB IP as URL and see the result. It should be nginx welcome page <br>
-![](3.png) <br>
+![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/GCP-Program/images/3.png) <br>
 Typing /demo/ path it will redirect us to tomcat app <br>
-![](4.png) <br>
+![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/GCP-Program/images/4.png) <br>
 Typing /img-bucket/ path and name of picture it will redirect us to pictures stored in Cloud Storage <br>
-![](5.png) <br>
+![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/GCP-Program/images/5.png) <br>
