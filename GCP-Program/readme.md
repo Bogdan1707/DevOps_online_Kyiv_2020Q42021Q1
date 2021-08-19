@@ -121,6 +121,15 @@ Typing /demo/ path it will redirect us to tomcat app <br>
 ![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/GCP-Program/images/4.png) <br>
 Typing /img-bucket/ path and name of picture it will redirect us to pictures stored in Cloud Storage <br>
 ![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/GCP-Program/images/5.png) <br>
+
+We have already installed Logging Agent on our VMs in MIG. Now we have to create dataset in BigQuery. <br>
+![](11.png) <br>
+And run following query <br>
+> SELECT * FROM `composed-task-321415.fluentd.nginx_access`  <br>
+
+We can se the result, all logs from nginx VMs <br>
+![](12.png) <br>
+
 #### 2. Creating Cloud Function that will be triggered by PubSub every 1 hour (by Cloud Scheduler)
 Firstly I've just created topic in PubSub <br>
 > gcloud pubsub topics create topic1
