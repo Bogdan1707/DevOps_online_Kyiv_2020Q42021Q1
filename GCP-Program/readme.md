@@ -121,3 +121,39 @@ Typing /demo/ path it will redirect us to tomcat app <br>
 ![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/GCP-Program/images/4.png) <br>
 Typing /img-bucket/ path and name of picture it will redirect us to pictures stored in Cloud Storage <br>
 ![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/GCP-Program/images/5.png) <br>
+#### 2. Creating Cloud Function that will be triggered by PubSub every 1 hour (by Cloud Scheduler)
+Firstly I've just created topic in PubSub <br>
+> gcloud pubsub topics create topic1
+
+Then created function <br>
+> mkdir gcf_hello_world <br>
+cd gcf_hello_world/ <br>
+cat << EOF > main.py <bt>
+import base64 <br>
+def hello_pubsub(event, context): <br>
+    """Triggered from a message on a Cloud Pub/Sub topic. <br>
+    Args:<br>
+         event (dict): Event payload.<br>
+         context (google.cloud.functions.Context): Metadata for the event.<br>
+    """<br>
+    pubsub_message = base64.b64decode(event['data']).decode('utf-8')<br>
+    print(pubsub_message)<br>
+    EOF <br>
+
+And deployed function <br>
+> gcloud functions deploy function1 \ <br>--trigger-topic=topic1 \ <br>--entry-point=hello_pubsub \ <br>--runtime=python39 \ <br>--region=us-east1
+
+We can check if function can be executed by triggering <br>
+> gcloud pubsub topics publish topic1 --message=hello <br>
+gcloud pubsub topics publish topic1 --message=hello2 <br>
+
+And result <br>
+![](6.png) <br>
+
+Then created job in Scheduler <br>
+It should send the message to PubSub topic1 every 1 hour, that will trigger my function <br>
+![](7.png) <br>
+And some hours later we can check the result <br>
+![](8.png) <br>
+
+##### Thank you for attention and wish you a productive day!
