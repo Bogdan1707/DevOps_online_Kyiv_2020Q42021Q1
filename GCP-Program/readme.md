@@ -5,7 +5,7 @@
 Next picture shows schemes of my service <br>
 ![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/GCP-Program/images/1.png) <br>
 When users uses public IP of external LB on nginx he will reach "nginx welcome page". <br>
-Using /img-bucket path it will redirect users to bucket with pictures.<br> Using /demo path it will redirect to tomcat app via configured DNS. <br> Also nginx will send logt to That will be described later. <br>
+Using /img-bucket path it will redirect users to bucket with pictures.<br> Using /demo path it will redirect to tomcat app via configured DNS. <br> Also nginx will send logt to BigQuery. That will be described later. <br>
 
 Firstly, created 2 buckets - public11 and private11. Uploaded tomcat sample app and nginx config file on private11 and cats pictures on public11 <br>
 > gsutil mb -c standard -l us-east1 gs://private11 <br>
@@ -148,12 +148,12 @@ We can check if function can be executed by triggering <br>
 gcloud pubsub topics publish topic1 --message=hello2 <br>
 
 And result <br>
-![](6.png) <br>
+![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/GCP-Program/images/6.png) <br>
 
 Then created job in Scheduler <br>
 It should send the message to PubSub topic1 every 1 hour, that will trigger my function <br>
-![](7.png) <br>
+![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/GCP-Program/images/7.png) <br>
 And some hours later we can check the result <br>
-![](8.png) <br>
+![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/GCP-Program/images/8.png) <br>
 
-##### Thank you for attention and wish you a productive day!
+#### Thank you for attention and wish you a productive day!
