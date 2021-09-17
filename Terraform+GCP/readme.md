@@ -5,7 +5,7 @@ Hello! Here is a picture that describes service I should create on GCP using Ter
 1. Create Network and private subnetwork <br>
 Firstly I installed Terraform localy and initialized it. Then created local repository with project. <br>
 There are <b>main.tf, outputs.tf,terraform.tfvars, variables.tf</b> and files with credentials to connect to GCP.<br>
-![](2.png) <br>
+![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/Terraform+GCP/images/2.png?raw=true) <br>
 Code form <b>main.tf</b> in this step (creating VPC and subnet) <br>
 ```
 terraform {
@@ -59,4 +59,4 @@ output "network" {
 }
 ```
 To be continued:)) <br>
-![](3.jpj)
+![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/Terraform+GCP/images/3.jpg?raw=true)
