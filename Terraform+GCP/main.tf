@@ -189,8 +189,47 @@ module "gce-lb-http" {
       session_affinity                = null
       affinity_cookie_ttl_sec         = null
 
+      health_check = {
+        check_interval_sec = 60
+        timeout_sec        = 5 
+        healthy_threshold  = 1 
+        unhealthy_threshold= 3
+        request_path       = "/"
+        port               = 80
+        host               = null
+        logging            = true
+      }
+
+       log_config = {
+        enable = true
+        sample_rate = 1.0
+      }
+
+      groups = [
+        {
+          group                        = google_compute_instance_group_manager.lamp-server.self_link
+          balancing_mode               = "UTILIZATION"
+          capacity_scaler              = 1
+          description                  = "HTTP for lamp-server"
+          max_connections              = null
+          max_connections_per_instance = null
+          max_connections_per_endpoint = null
+          max_rate                     = null
+          max_rate_per_instance        = null
+          max_rate_per_endpoint        = null
+          max_utilization              = 1
+        }
+      ]
+      iap_config = {
+        enable               = false
+        oauth2_client_id     = null
+        oauth2_client_secret = null
+      }
     }
   }
+  depends_on = [
+    google_compute_instance_group_manager.lamp-server
+  ]
 }
 
 resource "google_compute_security_policy" "lb-policy" {
