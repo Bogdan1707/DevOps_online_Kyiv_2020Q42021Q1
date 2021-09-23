@@ -9,3 +9,8 @@ variable "region" {
 variable "zone" {
   default = "us-central1-c"
 }
+
+variable "machine_type" {
+  default = "n1-standard-1"
+}
+
