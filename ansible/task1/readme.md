@@ -5,7 +5,7 @@ VM1 <br>
 ![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/ansible/task1/images/1.png)<br>
 VM2 <br>
 ![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/ansible/task1/images/2.png)<br>
-VM3 is kind of Load Balancer, so it directs traffic to my VMs by turns<br>
+VM3 is kind of Load Balancer, so it directs traffic to my VMs by turns and user can reach the webserver on VM1 or in VM2<br>
 
 #### Configuration description
 ***main.tf*** file describes infrastructure (3 VMs) creating, using ubuntu and debian images, and configuration of VMs with Ansible <br>
