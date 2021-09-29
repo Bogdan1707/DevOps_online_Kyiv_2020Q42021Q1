@@ -35,7 +35,7 @@ resource "google_compute_instance" "default1" {
   machine_type = var.machine_type
   zone         = var.zone
 
-  tags = ["http-server"] 
+  tags = ["http-server"]
 
   boot_disk {
     initialize_params {
@@ -142,4 +142,3 @@ resource "google_compute_instance" "default3" {
     scopes = ["cloud-platform"]
   }
 }
-
