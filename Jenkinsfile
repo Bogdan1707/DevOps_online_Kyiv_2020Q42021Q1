@@ -6,11 +6,13 @@ pipeline {
             script: 'sudo docker version --format "{{.Server.Version}}"'
             )
     }
-    stage('Checkout') {
+    
+    stages {
+        stage('Checkout') {
                 steps {
                     scmSkip(deleteBuild: true, skipPattern:'.*\\[ci skip\\].*')
                 }
-    stages {
+            }
         stage('Test') {
             steps {
                 sh 'sudo docker build -t build-$BUILD_NUMBER-on-docker-version-$DOCKER_VERSION -f Dockerfile .'
