@@ -21,7 +21,8 @@ pipeline {
         stage('Delivery') {
             steps {
                 sh 'mkdir archive'
-                zip zipFile: 'build_$BUILD_NUMBER.zip', archive: true, dir: 'archive'
+                zip zipFile: 'build_$BUILD_NUMBER.zip', archive: false, dir: 'archive'
+                archiveArtifacts artifacts: 'test.zip', fingerprint: true
             }
         }
     }
