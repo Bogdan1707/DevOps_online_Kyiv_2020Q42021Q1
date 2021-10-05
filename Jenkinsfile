@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                sh 'sudo docker build -f Dockerfile .'
+                sh 'sudo docker build -t $BUILD_NUMBER -f Dockerfile .'
             }
         }
     }
