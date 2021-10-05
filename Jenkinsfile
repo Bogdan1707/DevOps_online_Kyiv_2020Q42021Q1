@@ -13,7 +13,7 @@ pipeline {
                     scmSkip(deleteBuild: true, skipPattern:'.*\\[ci skip\\].*')
                 }
             }
-        stage('Build1') {
+        stage('Build') {
             steps {
                 sh 'sudo docker build -t build-$BUILD_NUMBER-on-docker-version-$DOCKER_VERSION -f Dockerfile .'
             }
