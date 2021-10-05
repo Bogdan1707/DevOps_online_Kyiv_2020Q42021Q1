@@ -20,7 +20,10 @@ pipeline {
         }
         stage('Delivery') {
             steps {
-                zip(archive: true)
+                zip(
+                    zipFile: '/home/bbf236579/workspace/pipeline1/builds/build_$BUILD_NUMBER.zip', 
+                    archive: true
+                    )
             }
         }
     }
