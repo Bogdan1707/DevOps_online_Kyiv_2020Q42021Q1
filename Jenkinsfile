@@ -10,7 +10,7 @@ pipeline {
     stages {
         stage('Checkout') {
                 steps {
-                    scmSkip(deleteBuild: true, skipPattern:'*ci_skip*')
+                    scmSkip(deleteBuild: true, skipPattern:'.*\\[ci skip\\].*')
                 }
             }
         stage('Build') {
@@ -19,7 +19,7 @@ pipeline {
             }
         }
         stage('Delivery') {
-            step {
+            steps {
                 zip(archive: true)
             }
         }
