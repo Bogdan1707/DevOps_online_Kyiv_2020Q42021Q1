@@ -6,6 +6,10 @@ pipeline {
             script: 'sudo docker version --format "{{.Server.Version}}"'
             )
     }
+    stage('Checkout') {
+                steps {
+                    scmSkip(deleteBuild: true, skipPattern:'.*\\[ci skip\\].*')
+                }
     stages {
         stage('Test') {
             steps {
