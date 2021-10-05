@@ -1,5 +1,5 @@
 pipeline {
-    agent { label '34.125.200.106' }
+    agent { dockerfile true }
 
     stages {
         stage('Hello') {
