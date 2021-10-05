@@ -3,7 +3,7 @@ pipeline {
     environment {
         DOCKER_VERSION = sh(
             returnStdout: true,
-            script: 'date'
+            script: 'docker version --format "{{.Server.Version}}"'
             )
     }
     stages {
