@@ -1,8 +1,7 @@
 pipeline {
     agent { label '34.125.200.106' }
     enviroment {
-        DOCKER_VERSION = 'docker version --format '{{.Server.Version}}'
-'
+        DOCKER_VERSION = sh 'docker version --format '{{.Server.Version}}''
     }
     stages {
         stage('Test') {
