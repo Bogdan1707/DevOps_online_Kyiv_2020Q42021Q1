@@ -20,9 +20,9 @@ pipeline {
         }
         stage('Delivery') {
             steps {
-                sh 'mkdir archive'
-                sh 'sudo zip zipFile: 'build_${BUILD_NUMBER}.zip''
-                archiveArtifacts artifacts: 'test.zip', fingerprint: true
+                sh 'sudo zip target/main-demo-app-${OWNER}-${BUILD_NUMBER}.zip target/*.jar'
+                archiveArtifacts artifacts: 'target/*.zip', fingerprint: true
+                echo 'Archived successful'
             }
         }
     }
