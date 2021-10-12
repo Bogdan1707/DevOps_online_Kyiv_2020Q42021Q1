@@ -10,12 +10,12 @@ pipeline {
     }
     
     stages {
-        stage('Checkout') {
+        /*stage('Checkout') {
                 steps {
                     scmSkip(deleteBuild: true, skipPattern: 'Hello')
                 }
             }
-        stage('Build') {
+        */stage('Build') {
             steps {
                 sh 'sudo docker build -t build-$BUILD_NUMBER-on-docker-version-$DOCKER_VERSION -f Dockerfile .'
             }
