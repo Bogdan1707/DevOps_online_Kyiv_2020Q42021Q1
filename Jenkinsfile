@@ -1,3 +1,5 @@
+#!/usr/bin/env groovy
+
 pipeline {
     agent { label '34.125.200.106' }
     environment {
@@ -20,7 +22,7 @@ pipeline {
         }
         stage('Delivery') {
             steps {
-                sudo zip target/main-demo-app-${OWNER}-${BUILD_NUMBER}.zip target/*.jar
+                sh 'sudo zip target/main-demo-app-${OWNER}-${BUILD_NUMBER}.zip target/*.jar'
                 archiveArtifacts artifacts: 'target/*.zip', fingerprint: true
                 echo 'Archived successful'
             }
