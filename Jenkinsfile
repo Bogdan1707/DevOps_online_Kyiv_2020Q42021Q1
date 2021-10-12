@@ -12,7 +12,7 @@ pipeline {
     stages {
         stage('Checkout') {
                 steps {
-                    scmSkip(deleteBuild: true, skipPattern: 'SKIP_CI')
+                    scmSkip(deleteBuild: true, skipPattern: 'Hello')
                 }
             }
         stage('Build') {
