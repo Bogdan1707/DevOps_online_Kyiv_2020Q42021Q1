@@ -20,12 +20,12 @@ pipeline {
                 sh 'sudo docker build -t build-$BUILD_NUMBER-on-docker-version-$DOCKER_VERSION -f Dockerfile .'
             }
         }
-        stage('Delivery') {
+        /*stage('Delivery') {
             steps {
                 sh 'sudo zip 'build_${BUILD_NUMBER}.zip''
                 archiveArtifacts artifacts: 'target/*.zip', fingerprint: true
                 echo 'Archived successful'
             }
         }
-    }
+    */}
 }
