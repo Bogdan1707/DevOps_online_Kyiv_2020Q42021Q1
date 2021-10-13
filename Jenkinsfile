@@ -22,7 +22,7 @@ pipeline {
         }
         stage('Delivery') {
             steps {
-                sh 'sudo zip zipFile: 'build_${BUILD_NUMBER}.zip''
+                sh 'sudo zip 'build_${BUILD_NUMBER}.zip''
                 archiveArtifacts artifacts: 'target/*.zip', fingerprint: true
                 echo 'Archived successful'
             }
