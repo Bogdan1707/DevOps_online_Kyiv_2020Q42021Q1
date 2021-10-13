@@ -19,7 +19,7 @@ pipeline {
             }
         */stage('Build') {
             steps {
-                build()
+                buildArt()
             }
         }
         /*stage('Delivery') {
