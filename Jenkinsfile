@@ -1,5 +1,5 @@
 #!/usr/bin/env groovy
-@library('jenkins-library')_ 
+@OLibrary('jenkins-library')_ 
 
 
 pipeline {
