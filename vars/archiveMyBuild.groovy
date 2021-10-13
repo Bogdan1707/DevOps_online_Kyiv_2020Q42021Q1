@@ -1,5 +1,5 @@
 def call(){
-    sh 'sudo zip target/master-demo-app-${OWNER}-${BUILD_NUMBER}.zip'
-    archiveArtifacts artifacts: 'target/*.zip', fingerprint: true
+    sh 'sudo zip build-$BUILD_NUMBER-on-docker-version-$DOCKER_VERSION.zip'
+    archiveArtifacts artifacts: 'build-$BUILD_NUMBER-on-docker-version-$DOCKER_VERSION.zip', fingerprint: true
     echo 'Archived successful'
 }
