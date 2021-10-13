@@ -25,6 +25,7 @@ pipeline {
         stage('Delivery') {
             steps {
                 archiveMyBuild()
+                //cleanWS
             }
         }
     }
