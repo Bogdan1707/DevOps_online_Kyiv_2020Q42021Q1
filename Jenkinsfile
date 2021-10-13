@@ -1,4 +1,6 @@
 #!/usr/bin/env groovy
+@library('jenkins-library')_ 
+
 
 pipeline {
     agent { label '34.125.200.106' }
@@ -17,7 +19,7 @@ pipeline {
             }
         */stage('Build') {
             steps {
-                sh 'sudo docker build -t build-$BUILD_NUMBER-on-docker-version-$DOCKER_VERSION -f Dockerfile .'
+                build()
             }
         }
         /*stage('Delivery') {
