@@ -22,11 +22,18 @@ pipeline {
                 buildArt()
             }
         }
-        stage('Delivery') {
-            steps {
-                archiveMyBuild()
-                //cleanWS
-            }
+    }
+
+    post{
+        success {
+            archiveMyBuild()
+        }
+        failure {
+            echo 'Failed'
+        }
+        always {
+            echo 'End of the job!'
+            //cleanWs
         }
     }
 }
