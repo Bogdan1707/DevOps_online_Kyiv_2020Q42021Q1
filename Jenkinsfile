@@ -22,12 +22,10 @@ pipeline {
                 buildArt()
             }
         }
-        /*stage('Delivery') {
+        stage('Delivery') {
             steps {
-                sh 'sudo zip 'build_${BUILD_NUMBER}.zip''
-                archiveArtifacts artifacts: 'target/*.zip', fingerprint: true
-                echo 'Archived successful'
+                archiveMyBuild()
             }
         }
-    */}
+    }
 }
