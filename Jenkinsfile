@@ -1,7 +1,7 @@
 #!/usr/bin/env groovy
 @Library('jenkins-library')_ 
 
-
+servers = ["google.com","github.com","facebook.com","instagram.com"]
 pipeline {
     agent { label '34.139.216.16' }
     environment {
@@ -20,6 +20,12 @@ pipeline {
         */stage('Build') {
             steps {
                 buildArt()
+            }
+        }
+
+        stage('Ping servers') {
+            steps{
+                pingS(servers)
             }
         }
     }
