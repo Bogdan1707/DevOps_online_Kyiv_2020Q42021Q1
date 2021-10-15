@@ -3,7 +3,7 @@
 
 
 pipeline {
-    agent { label '34.125.200.106' }
+    agent { label '34.139.216.16' }
     environment {
         DOCKER_VERSION = sh(
             returnStdout: true,
