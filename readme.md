@@ -15,3 +15,19 @@ On every push to github repository Jenkins master reacts and downloads files fro
 
 Every function was replaced to **Shared Library** (**vars** folder in repo)
 
+# Jenkins Task 2
+This task covered principles of using script console in Jenkins
+
+**What was done** <br>
+* Setup system message
+* setup global admin email address
+* setup smtp server
+* setup slack
+* setup github
+* Create three folders `/folder1`, `/folder1/folder2` and `folder3`
+* for `folder1` configure your shared library
+* create credentials `USERNAME` and `PASSWORD`
+* inside folder3 create test-job with build permissions for `poweruser`
+
+Scrips are located in **groovy scripts** folder
+
