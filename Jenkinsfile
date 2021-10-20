@@ -1,5 +1,5 @@
 #!/usr/bin/env groovy
-@Library('jenkins-library')_ 
+@Library('jenkins-library')_
 
 servers = ["google.com","github.com","facebook.com","instagram.com"]
 pipeline {
