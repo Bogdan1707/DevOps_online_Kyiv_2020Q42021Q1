@@ -8,9 +8,9 @@ pipeline {
         DOCKER_VERSION = sh(
             returnStdout: true,
             script: 'sudo docker version --format "{{.Server.Version}}"'
-            )
+            ).trim()
     }
-    
+
     stages {
         /*stage('Checkout') {
                 steps {
