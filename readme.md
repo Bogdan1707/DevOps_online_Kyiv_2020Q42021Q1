@@ -29,5 +29,4 @@ This task covered principles of using script console in Jenkins
 * create credentials `USERNAME` and `PASSWORD`
 * inside folder3 create test-job with build permissions for `poweruser`
 
-Scrips are located in **groovy scripts** folder
-
+Scrips are divided and located in **groovy scripts** folder
