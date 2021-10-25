@@ -41,4 +41,4 @@ Text message
 You display the wonderful traits of charm and courtesy.
 ```
 And also, It's possible to check it in browser <br>
-![](1.png) <br>
+![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/kubernetes/task2/images/1.png) <br>
