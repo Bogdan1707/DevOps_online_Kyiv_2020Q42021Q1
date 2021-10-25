@@ -1,0 +1,23 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt
+  name: fortune-ingress
+  namespace: bohdan
+spec:
+  rules:
+  - host: fortune-bohdan.kubelab.spainip.es
+    http:
+      paths:
+      - backend:
+          service:
+            name: fortune-service
+            port:
+              number: 80
+        path: /
+        pathType: ImplementationSpecific
+  tls:
+  - hosts:
+    - fortune-bohdan.kubelab.spainip.es
+    secretName: tls-fortune-ingress
