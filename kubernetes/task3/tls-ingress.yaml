@@ -1,0 +1,25 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt
+  name: wp-ingress
+  namespace: bohdan
+  labels:
+    app: wordpress
+spec:
+  rules:
+  - host: bohdan-wp.kubelab.spainip.es
+    http:
+      paths:
+      - backend:
+          service:
+            name: wordpress
+            port:
+              number: 80
+        path: /
+        pathType: ImplementationSpecific
+  tls:
+  - hosts:
+    - bohdan-wp.kubelab.spainip.es
+    secretName: tls-wp-ingress
