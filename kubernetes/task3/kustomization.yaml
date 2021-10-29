@@ -2,7 +2,7 @@ secretGenerator:
 - name: mysql-pass
   namespace: bohdan
   literals:
-  - password=123321
+  - password=<YOUR_PASSWORD>
 resources:
   - mysql-deployment.yaml
   - wordpress-deployment.yaml
