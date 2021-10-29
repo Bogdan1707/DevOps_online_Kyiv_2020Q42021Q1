@@ -66,4 +66,4 @@ wordpress-mysql-65596f6fcd-svtsq      1/1     Running   0          23h
 
 7. Check WordPress in Browser. <br>
 <https://bohdan-wp.kubelab.spainip.es/wp-admin/> <br>
-![](1.png) <br>
+![](https://github.com/Bogdan1707/DevOps_online_Kyiv_2020Q42021Q1/blob/main/kubernetes/task3/images/1.png) <br>
